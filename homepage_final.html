@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>세종SKY에듀 | SEJONG SKYEDU</title>
+  <meta name="description"
+    content="세종시 수학 전문 학원. 자체 개발 교재 세종SKY에듀 Series와 전문 강사진으로 흔들리지 않는 수학적 사고력을 완성합니다. 학원소개·시간표·수강료·가맹 안내.">
+
+  <!-- 검색엔진 등록 (본인 코드로 교체하세요) -->
+  <!-- <meta name="google-site-verification" content="여기에-구글-코드"> -->
+  <!-- <meta name="naver-site-verification" content="여기에-네이버-코드"> -->
+
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <style>
+    :root {
+      --navy: #1a365d;
+      --navy-deep: #142a4a;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+      --accent: #e2e8f0;
+      --text: #333;
+      --muted: #666;
+      --line: #eaeaea;
+      --radius: 10px;
+      --shadow: 0 4px 6px rgba(0, 0, 0, .05);
+      --shadow-lg: 0 14px 34px -18px rgba(26, 54, 93, .4);
+      --font: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      --maxw: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font)
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 78px
+    }
+
+    body {
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    ul {
+      list-style: none
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: var(--maxw);
+      margin: 0 auto
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 14px;
+      color: var(--navy)
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 50px;
+      font-size: 16px
+    }
+
+    /* ── 헤더 ── */
+    header.nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      transition: padding .25s, box-shadow .25s;
+    }
+
+    header.nav.scrolled {
+      padding: 12px 50px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .04)
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--navy)
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-weight: 500
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      color: var(--text);
+      transition: color .2s
+    }
+
+    .nav-links a:hover {
+      color: var(--navy)
+    }
+
+    .btn-franchise {
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background .2s, transform .2s
+    }
+
+    .btn-franchise:hover {
+      background: var(--navy-deep);
+      transform: translateY(-2px)
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: var(--navy);
+      cursor: pointer
+    }
+
+    /* ── 히어로 ── */
+    .hero {
+      background: radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15), transparent 40%),
+        linear-gradient(135deg, #0b1329 0%, #111a30 50%, #1a365d 100%);
+      color: #fff;
+      text-align: center;
+      padding: 140px 20px 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "f(x)=ax²+bx+c   ∫   √   π   Σ   θ";
+      position: absolute;
+      bottom: 15px;
+      right: -30px;
+      white-space: nowrap;
+      font-size: 6.5rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.025);
+      transform: rotate(-3deg);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span.highlight {
+      background: linear-gradient(to right, #38bdf8, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 40px;
+      opacity: .85;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.65;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: #fff;
+      padding: 16px 32px;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+      filter: brightness(1.1);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      padding: 16px 32px;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: #0f172a;
+      border-color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-stats .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 24px 16px;
+      border-radius: 14px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: center;
+    }
+
+    .hero-stats .stat-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.25);
+    }
+
+    .hero-stats .stat-emoji {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .hero-stats .num {
+      font-size: 2.1rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 60%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+      display: block;
+    }
+
+    .hero-stats .lbl {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    /* ── 카드 그리드 공통 ── */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px
+    }
+
+    .card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      border-top: 4px solid var(--navy);
+      transition: transform .25s, box-shadow .25s
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .card .ic {
+      display: inline-flex;
+      width: 54px;
+      height: 54px;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: var(--navy);
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 16px
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--navy)
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    /* ── 원장 인사말 ── */
+    #principal {
+      max-width: none;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .principal-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 50px;
+      align-items: center
+    }
+
+    .portrait {
+      aspect-ratio: 4/5;
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, var(--navy), var(--navy-deep));
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      color: #fff;
+      box-shadow: var(--shadow-lg)
+    }
+
+    .portrait span {
+      font-size: 1rem;
+      background: rgba(255, 255, 255, .14);
+      padding: 7px 14px;
+      border-radius: 5px;
+      font-weight: 600
+    }
+
+    .principal-text blockquote {
+      font-size: 1.5rem;
+      line-height: 1.55;
+      color: var(--navy);
+      font-weight: 700;
+      border-left: 4px solid var(--navy);
+      padding-left: 22px;
+      margin-bottom: 22px
+    }
+
+    .principal-text p {
+      color: var(--muted);
+      margin-bottom: 14px
+    }
+
+    .sign {
+      color: var(--navy);
+      font-weight: 700
+    }
+
+    .teachers-grid {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    /* ── 강사 ── */
+    .teacher .photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(150deg, var(--navy), #2c5282)
+    }
+
+    .teacher .role {
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px
+    }
+
+    .teacher p {
+      line-height: 1.8
+    }
+
+    /* ── 표 (시간표·수강료) ── */
+    .table-scroll {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: #fff
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px
+    }
+
+    caption {
+      text-align: left;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      padding: 18px 20px
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px
+    }
+
+    thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 600
+    }
+
+    tbody th {
+      background: #f1f5fa;
+      font-weight: 600;
+      color: var(--navy)
+    }
+
+    tbody tr:hover td {
+      background: #f7f9fc
+    }
+
+    td.fee {
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 16px
+    }
+
+    .table-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 14px;
+      text-align: center
+    }
+
+    /* ── 커리큘럼 타임라인 ── */
+    .timeline {
+      border-left: 3px solid var(--accent);
+      padding-left: 30px;
+      max-width: 760px;
+      margin: 0 auto
+    }
+
+    .tl-item {
+      position: relative;
+      padding-bottom: 32px
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -39px;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--navy);
+      box-shadow: 0 0 0 4px var(--bg)
+    }
+
+    .tl-item .grade {
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 14px
+    }
+
+    .tl-item h3 {
+      font-size: 20px;
+      margin: 4px 0 6px;
+      color: var(--text)
+    }
+
+    .tl-item p {
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    /* ── 자체 교재 ── */
+    #textbook {
+      max-width: none;
+      background: var(--navy);
+      color: #fff
+    }
+
+    #textbook .section-title {
+      color: #fff
+    }
+
+    #textbook .section-sub {
+      color: rgba(255, 255, 255, .7)
+    }
+
+    .book-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center
+    }
+
+    .book-cover {
+      aspect-ratio: 3/4;
+      max-width: 280px;
+      border-radius: 6px;
+      background: linear-gradient(160deg, #2c5282, var(--navy-deep));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+      box-shadow: 0 30px 60px -25px rgba(0, 0, 0, .6)
+    }
+
+    .book-cover .bt {
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 1.2
+    }
+
+    .book-cover .bb {
+      opacity: .8;
+      font-weight: 600
+    }
+
+    #textbook ul {
+      display: grid;
+      gap: 16px
+    }
+
+    #textbook li {
+      padding-left: 30px;
+      position: relative;
+      color: rgba(255, 255, 255, .9)
+    }
+
+    #textbook li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800
+    }
+
+    /* ── 후기 ── */
+    .reviews-grid {
+      columns: 3;
+      column-gap: 30px
+    }
+
+    .review {
+      break-inside: avoid;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      margin-bottom: 30px;
+      border-top: 4px solid var(--accent)
+    }
+
+    .review .stars {
+      color: #f0b429;
+      letter-spacing: 2px;
+      margin-bottom: 10px
+    }
+
+    .review p {
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    .review .who {
+      margin-top: 14px;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--navy)
+    }
+
+    /* ── 가맹 ── */
+    #franchise {
+      max-width: none;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .fr-inner {
+      max-width: var(--maxw);
+      margin: 0 auto
+    }
+
+    .fr-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px
+    }
+
+    .fr-step {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 28px;
+      border-top: 4px solid var(--navy)
+    }
+
+    .fr-step .n {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1
+    }
+
+    .fr-step h3 {
+      font-size: 18px;
+      margin: 8px 0 8px;
+      color: var(--navy)
+    }
+
+    .fr-step p {
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    /* ── 오시는 길 ── */
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: stretch
+    }
+
+    .map-wrap {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      height: 360px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: block;
+      cursor: pointer;
+    }
+
+    .map-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+      display: block;
+    }
+
+    .map-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(26, 54, 93, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .3s ease;
+      backdrop-filter: blur(2px);
+    }
+
+    .map-overlay-text {
+      background: #03cf5d;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 15px;
+      box-shadow: 0 4px 15px rgba(3, 207, 93, 0.4);
+      transform: translateY(10px);
+      transition: transform .3s ease;
+    }
+
+    .map-wrap:hover img {
+      transform: scale(1.05);
+    }
+
+    .map-wrap:hover .map-overlay {
+      opacity: 1;
+    }
+
+    .map-wrap:hover .map-overlay-text {
+      transform: translateY(0);
+    }
+
+    .map-buttons {
+      display: flex;
+      background: #fff;
+      border-top: 1px solid var(--line);
+    }
+
+    .btn-map {
+      flex: 1;
+      text-align: center;
+      padding: 12px 10px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background .2s;
+    }
+
+    .btn-map.naver {
+      background: #03cf5d;
+      color: #fff;
+    }
+
+    .btn-map.naver:hover {
+      background: #02b34f;
+    }
+
+    .btn-map.kakao {
+      background: #fee500;
+      color: #191919;
+    }
+
+    .btn-map.kakao:hover {
+      background: #e6cf00;
+    }
+
+    .loc-info {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      border-top: 4px solid var(--navy)
+    }
+
+    .loc-info dl {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 16px 18px
+    }
+
+    .loc-info dt {
+      font-weight: 700;
+      color: var(--navy)
+    }
+
+    .loc-info dd {
+      color: var(--muted)
+    }
+
+    /* ── 문의 폼 ── */
+    .contact-form {
+      background: #fff;
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 600px;
+      margin: 0 auto;
+      border-top: 4px solid var(--navy)
+    }
+
+    .form-group {
+      margin-bottom: 20px
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--text)
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color .2s, box-shadow .2s
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(26, 54, 93, .1)
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background .2s
+    }
+
+    .btn-submit:hover {
+      background: var(--navy-deep)
+    }
+
+    /* ── 푸터 ── */
+    footer {
+      background: var(--navy);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 50px
+    }
+
+    footer p {
+      margin-bottom: 10px;
+      opacity: .85;
+      font-size: 14px
+    }
+
+    /* ── 스크롤 등장 ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* ── 반응형 (모바일에서 PC버전과 동일하게 보이도록 비활성화) ──
+    @media(max-width:900px) {
+      header.nav {
+        padding: 16px 20px
+      }
+
+      .nav-links {
+        display: none
+      }
+
+      .menu-toggle {
+        display: block
+      }
+
+      .principal-inner,
+      .book-inner,
+      .loc-grid {
+        grid-template-columns: 1fr
+      }
+
+      .teachers-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px;
+        padding: 0 20px;
+      }
+
+      .fr-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .reviews-grid {
+        columns: 2
+      }
+
+      .hero h1 {
+        font-size: 36px
+      }
+    }
+
+    @media(max-width:560px) {
+      section {
+        padding: 60px 20px
+      }
+
+      .fr-grid,
+      .teachers-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+      }
+
+      .reviews-grid {
+        columns: 1
+      }
+
+      .hero::after {
+        display: none
+      }
+
+      .hero-stats {
+        gap: 30px
+      }
+    }
+    =================== */
+
+    /* ── 합격 실적 필터 & 그리드 ── */
+    .pass-filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: #fff;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s ease;
+      font-size: 14px;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .pass-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .pass-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: transform .3s ease, box-shadow .3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pass-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pass-img-wrap {
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: #f0f4f8;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pass-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .pass-card:hover .pass-img-wrap img {
+      transform: scale(1.08);
+    }
+
+    .pass-info {
+      padding: 12px 14px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .pass-info h4 {
+      font-size: 14px;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .pass-more-wrap {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn-pass-more {
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+
+    .btn-pass-more:hover {
+      background: var(--navy-deep);
+      transform: translateY(-2px);
+    }
+
+    /* ── 라이트박스 모달 ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(5px);
+    }
+
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 5px;
+      animation: zoom .3s;
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-close:focus {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .lightbox-caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .time-tab-btn {
+      background: #fff;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s ease;
+      font-size: 14px;
+    }
+
+    .time-tab-btn.active,
+    .time-tab-btn:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    /* ── 합격 명예의 전당 ── */
+    .honor-card {
+      border-top: 4px solid var(--navy-deep) !important;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 480px;
+      text-align: left !important;
+    }
+
+    .honor-header {
+      background: var(--navy);
+      color: #fff;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .honor-header h3 {
+      font-size: 20px;
+      color: #fff !important;
+      margin: 0 !important;
+      font-weight: 800;
+    }
+
+    .honor-header span {
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .honor-body {
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .honor-body ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .honor-body li {
+      border-bottom: 1px dashed var(--line);
+      padding-bottom: 6px;
+      color: var(--text);
+    }
+
+    .honor-body li strong {
+      color: var(--navy);
+    }
+
+    .honor-body li small {
+      color: var(--muted);
+      display: block;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .more-divider {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      background: #f1f5fa;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-align: center;
+      border-bottom: none !important;
+      margin: 6px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ 헤더 ============ -->
+  <header class="nav" id="topnav">
+    <a href="#hero" class="logo">세종SKY에듀</a>
+    <ul class="nav-links">
+      <li><a href="#about">🏫 학원소개</a></li>
+      <li><a href="#principal">👨‍🏫 원장인사말</a></li>
+      <li><a href="#teachers">👥 강사소개</a></li>
+      <li><a href="#timetable">📅 시간표</a></li>
+      <li><a href="#curriculum">📝 커리큘럼</a></li>
+      <li><a href="#pricing">💳 수강료</a></li>
+      <!-- <li><a href="#textbook">자체교재</a></li> -->
+      <li><a href="#reviews">💬 후기</a></li>
+      <li><a href="#pass">🏆 합격실적</a></li>
+      <li><a href="#honor">✨ 명예의전당</a></li>
+      <!-- <li><a href="#franchise">가맹안내</a></li> -->
+      <li><a href="#location">📍 오시는 길</a></li>
+    </ul>
+    <!-- <a href="#contact" class="btn-franchise">가맹 문의하기 →</a> -->
+    <button class="menu-toggle" aria-label="메뉴">≡</button>
+  </header>
+
+  <!-- ============ 히어로 ============ -->
+  <section class="hero" id="hero" style="max-width:none">
+    <h1>수학, 과학의 <span class="highlight">본질</span>을 꿰뚫고,<br>흔들리지 않는 <span class="highlight">직관</span>을 완성하다</h1>
+    <p>KAIST 출신 정예 강사진과 자체 집필 교재 최강의 시너지.<br>상위 1%로 도약하는 세종SKY에듀의 증명된 솔루션입니다.</p>
+    <div class="hero-cta">
+      <a href="#curriculum" class="btn-primary">커리큘럼 보기 →</a>
+      <a href="#contact" class="btn-outline">상담 신청하기</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-emoji">👨‍🎓</div>
+        <div class="num">1,200+</div>
+        <div class="lbl">누적 수강생</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-emoji">📈</div>
+        <div class="num">1.8↑</div>
+        <div class="lbl">평균 등급 향상</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-emoji">👨‍🏫</div>
+        <div class="num">100%</div>
+        <div class="lbl">KAIST·명문대 강사진</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-emoji">🔥</div>
+        <div class="num">6년 연속</div>
+        <div class="lbl">영재·과학고 합격 배출</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 학원소개 ============ -->
+  <section id="about">
+    <h2 class="section-title reveal"><!-- 🏫 --> 개념을 쌓고, 사고를 단련하는 곳</h2>
+    <p class="section-sub reveal">단순 암기가 아니라 ‘왜 그렇게 되는가’를 묻는 수업. 학생이 스스로 길을 찾도록 설계된 세종SKY에듀의 교육 철학입니다.</p>
+    <div class="grid-container">
+      <div class="card reveal">
+        <div class="ic">α</div>
+        <h3>개념 우선</h3>
+        <p>공식 이전에 원리. 정의에서 출발해 흔들리지 않는 기초를 세웁니다.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">β</div>
+        <h3>밀착 관리</h3>
+        <p>소수 정예 반 편성과 클리닉으로 빈틈을 끝까지 메웁니다.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">γ</div>
+        <h3>데이터 피드백</h3>
+        <p>주간 테스트 결과를 분석해 학부모님께 정기 리포트를 제공합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 원장 인사말 ============ -->
+  <section id="principal">
+    <div class="principal-inner">
+      <div class="portrait reveal"><span>원장 이 * 수</span></div>
+      <div class="principal-text reveal">
+        <h2 class="section-title" style="text-align:left;margin-bottom:18px"><!-- 👨‍🏫 --> 원장 인사말</h2>
+        <blockquote>“수학은 단순 암기가 아닌 본질적인 사고의 훈련입니다. KAIST 출신 명품 강사진과 함께 세종 교육의 올바른 기준을 세우겠습니다.”</blockquote>
+        <p>안녕하세요. 세종SKY에듀 수학학원 대표원장 이*수입니다. 저희 학원은 단순히 점수를 올리는 기술을 넘어, 학생이 스스로 문제를 해결할 수 있는 진정한 수학적 사고력을 단련하는 데 집중합니다.
+        </p>
+        <p>2026년 1학기 기말고사를 대비하여, 저희 KAIST 및 명문대 출신 강사진은 학생들과 발맞추어 다시 한번 뜨겁게 시작합니다. 중등부 소수 정예 수업부터 고등부 내신, 과학고/영재학교 최종
+          파이널 특강까지 학생 한 명 한 명의 성장을 약속드립니다.</p>
+        <p class="sign">— 세종SKY에듀 수학학원 원장 이 * 수</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 강사 소개 ============ -->
+  <section id="teachers">
+    <h2 class="section-title reveal"><!-- 👥 --> 세종SKY에듀 강사진 소개</h2>
+    <p class="section-sub reveal">KAIST 및 공학박사 출신의 막강한 강사진이 세종 교육의 올바른 길을 제시합니다.</p>
+    <div class="grid-container teachers-grid">
+      <div class="card teacher reveal">
+        <div class="photo"></div>
+        <h3>이 * 수 원장</h3>
+        <div class="role">대표 원장 / 공학박사</div>
+        <p>영재학교 Final 수학·과학 총괄<br>공학박사 학위 소지<br>세종SKY에듀 대표 원장</p>
+      </div>
+      <!-- <div class="card teacher reveal">
+        <div class="photo"></div>
+        <h3>정 * 봉 강사</h3>
+        <div class="role">수학 대표강사</div>
+        <p>KAIST 졸업<br>영재학교 Final 수학 전문<br>고등부 심화 및 경시 수학</p>
+      </div> -->
+      <div class="card teacher reveal">
+        <div class="photo"></div>
+        <h3>신 * 섭 강사</h3>
+        <div class="role">수학 · 과학 강사</div>
+        <p>KAIST 졸업<br>영재학교 Final 수학·과학 전문<br>중/고등 심화 및 영재 특강</p>
+      </div>
+      <div class="card teacher reveal">
+        <div class="photo"></div>
+        <h3>김 * 진 강사</h3>
+        <div class="role">물리 대표강사</div>
+        <p>KAIST 졸업<br>고등 물리 1 전문<br>수능 및 내신 만점 대비반</p>
+      </div>
+      <div class="card teacher reveal">
+        <div class="photo"></div>
+        <h3>박 * 성 강사</h3>
+        <div class="role">화학 대표강사</div>
+        <p>KAIST 졸업<br>고등 화학 1 전문<br>수능 및 내신 만점 대비반</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 시간표 (실제 표) ============ -->
+  <section id="timetable">
+    <h2 class="section-title reveal">📅 2026학년도 학년별 강좌 시간표</h2>
+    <p class="section-sub reveal">세종SKY에듀의 명품 수학·과학 강좌 라인업입니다. 각 탭을 클릭하여 시간표를 확인하세요.</p>
+
+    <!-- 시간표 탭 버튼 -->
+    <div class="pass-filters reveal" style="margin-bottom: 25px;">
+      <button class="time-tab-btn active" onclick="switchTimetable('math')">📐 수학 강좌</button>
+      <button class="time-tab-btn" onclick="switchTimetable('science')">🔬 과학 강좌</button>
+      <button class="time-tab-btn" onclick="switchTimetable('gifted')">🎓 영재학교 Final</button>
+    </div>
+
+    <!-- 수학 시간표 -->
+    <div class="table-scroll reveal time-content" id="time-math">
+      <table>
+        <thead>
+          <tr>
+            <th>강좌명</th>
+            <th>대상 학교/학년</th>
+            <th>수업 요일 및 시간</th>
+            <th>교재 및 특징</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>중등부 수학<br>(5명 정원)</th>
+            <td>중등 전 학년</td>
+            <td>월/수/금 15:30 – 19:00<br>또는 화/목/금 15:30 – 19:00</td>
+            <td>기본개념 & 심화반<br>(과정에 따라 개별 수학교재 사용)</td>
+          </tr>
+          <tr>
+            <th>공통수학 1<br>(5명 정원)</th>
+            <td>아름고, 종촌고, 두루고, 양지고, 고운고 등</td>
+            <td>월/수/금 19:15 – 21:30<br>또는 화/목/금 19:15 – 21:30</td>
+            <td>고1 필수 개념 및 내신 완벽 대비</td>
+          </tr>
+          <tr>
+            <th>공통수학 1, 2<br>(5명 정원)</th>
+            <td>과학고, 세종국제고, 대전외고, 천안북일고, 공주사대부고</td>
+            <td>주말반 (토 · 일)</td>
+            <td>특목고/자사고 내신 맞춤형 심화수업</td>
+          </tr>
+          <tr>
+            <th>대수<br>(5명 정원)</th>
+            <td>아름고, 종촌고, 두루고, 양지고, 고운고 등</td>
+            <td>월/수/금 19:15 – 21:30<br>또는 화/목/금 18:30 – 21:30</td>
+            <td>수능 기초 체력 배양 및 내신 완벽 대비</td>
+          </tr>
+          <tr>
+            <th>미적분 · 미적분 심화</th>
+            <td>과학고, 공주사대부고, 한일고, 천안북일고 등</td>
+            <td>주말반 (토 · 일)</td>
+            <td>상위권 학생을 위한 수능/내신 고난도 미적분</td>
+          </tr>
+          <tr>
+            <th>고3 미적분 & 수리논술<br>■ 현재 진행중</th>
+            <td>고3 (내신 4등급 이하 대상)</td>
+            <td>주말반 (일요일)</td>
+            <td>대학별 논술 기출 풀이 & 답안지 대면 첨삭 진행</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 과학 시간표 -->
+    <div class="table-scroll reveal time-content" id="time-science" style="display:none;">
+      <table>
+        <thead>
+          <tr>
+            <th>강좌명</th>
+            <th>대상 학년</th>
+            <th>수업 요일 및 시간</th>
+            <th>교재 및 강사진</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>중등 주말 과학</th>
+            <td>중1, 중2, 중3 개별 반 구성</td>
+            <td>주말반 (토 · 일)</td>
+            <td>오투 중등과학 & 자체 프린트 부교재</td>
+          </tr>
+          <tr>
+            <th>고1 통합과학<br>(2명 추가 모집)</th>
+            <td>고등학교 1학년</td>
+            <td>토요일반</td>
+            <td>완자 통합과학 + EBS 통합과학</td>
+          </tr>
+          <tr>
+            <th>물리 1<br>(정원 마감)</th>
+            <td>고등부 (물리 선택자)</td>
+            <td>주말반 (토 · 일)</td>
+            <td>완자 물리 1 & 수능특강<br><strong>강의: 김 * 진 (KAIST 졸)</strong></td>
+          </tr>
+          <tr>
+            <th>화학 1<br>(2명 추가 모집)</th>
+            <td>고등부 (화학 선택자)</td>
+            <td>주말반 (토 · 일)</td>
+            <td>완자 화학 1 & 수능특강<br><strong>강의: 박 * 성 (KAIST 졸)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 영재학교 파이널 -->
+    <div class="table-scroll reveal time-content" id="time-gifted" style="display:none;">
+      <table>
+        <thead>
+          <tr>
+            <th>강좌명</th>
+            <th>대상 및 목적</th>
+            <th>수업 요일 및 시간</th>
+            <th>강의 내용 및 강사진</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>[영재학교 Final] 수학</th>
+            <td>2026 영재학교 응시 희망생</td>
+            <td>토요일 & 일요일 10:30 – 13:30</td>
+            <td>실전 모의고사 중심 수업<br><strong>강의: 이*수 (공학박사), 정*봉 (KAIST졸), 신*섭 (KAIST졸)</strong></td>
+          </tr>
+          <tr>
+            <th>[영재학교 Final] 과학</th>
+            <td>2026 영재학교 응시 희망생</td>
+            <td>토요일 14:00 – 16:30 (물리, 화학)<br>일요일 14:00 – 16:30 (생물, 지구과학)</td>
+            <td>I&I 단원별 영재학교 기출문제 풀이 & 답안지 작성<br><strong>강의: 이*수 (공학박사), 신*섭 (KAIST졸)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="table-note reveal">※ 각 반은 소수정예(정원 5명 등)로 운영되며, 충원 여부는 학원 문의를 통해 실시간으로 확인하실 수 있습니다.</p>
+  </section>
+
+  <!-- ============ 커리큘럼 ============ -->
+  <section id="curriculum">
+    <h2 class="section-title reveal">📝 학년별 단계 로드맵</h2>
+    <p class="section-sub reveal">선행과 심화를 학생 수준에 맞춰 설계합니다.</p>
+    <div class="timeline">
+      <div class="tl-item reveal"><span class="grade">🌱 STEP 1 · 중1–중2</span>
+        <h3>개념 정착 과정</h3>
+        <p>교과 개념을 빈틈없이 정리하고, 기본 유형을 반복 숙달합니다.</p>
+      </div>
+      <div class="tl-item reveal"><span class="grade">🌿 STEP 2 · 중3</span>
+        <h3>고등 연계 선행</h3>
+        <p>고1 수학(상·하)을 미리 다지며 내신과 선행을 병행합니다.</p>
+      </div>
+      <div class="tl-item reveal"><span class="grade">🌳 STEP 3 · 고1–고2</span>
+        <h3>내신·모의고사 통합</h3>
+        <p>학교별 기출 분석과 모의고사 실전 훈련을 동시에 진행합니다.</p>
+      </div>
+      <div class="tl-item reveal"><span class="grade">🎓 STEP 4 · 고3</span>
+        <h3>수능 파이널</h3>
+        <p>약점 단원 집중 보완과 실전 모의 테스트로 마무리합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 수강료 ============ -->
+  <section id="pricing">
+    <h2 class="section-title reveal"><!-- 💳 --> 합리적인 수강 비용</h2>
+    <p class="section-sub reveal">세종SKY에듀의 투명하고 합리적인 수강료 안내입니다.</p>
+    <div class="table-scroll reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>과정</th>
+            <th>대상</th>
+            <th>수업 구성</th>
+            <th>포함 사항</th>
+            <th>월 수강료</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>중등부 수학 정규반</td>
+            <td>중1 – 중3</td>
+            <td>주 3회 (회당 210분)</td>
+            <td>5명 소수정예 / 맞춤 클리닉</td>
+            <td class="fee">42만원</td>
+          </tr>
+          <tr>
+            <td>고등부 수학 (공통수학/대수)</td>
+            <td>고1 – 고2</td>
+            <td>주 3회 (회당 135분)</td>
+            <td>학교별 기출 분석 및 주간 테스트</td>
+            <td class="fee">48만원</td>
+          </tr>
+          <tr>
+            <td>고등부 미적분 · 수리논술</td>
+            <td>고3 / N수생</td>
+            <td>주 1회 ~ 2회</td>
+            <td>대학별 수리논술 기출 & 첨삭 자료</td>
+            <td class="fee">상담 문의</td>
+          </tr>
+          <tr>
+            <td>영재학교 Final 특강</td>
+            <td>영재학교 준비생</td>
+            <td>주말 특강</td>
+            <td>실전 모의고사 및 서술형 첨삭</td>
+            <td class="fee">상담 문의</td>
+          </tr>
+          <tr>
+            <td>중/고등 과학 프로그램</td>
+            <td>중1 – 고3</td>
+            <td>주말반</td>
+            <td>오투/완자 교재 중심 + KAIST 강사진 강의</td>
+            <td class="fee">상담 문의</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note reveal">※ 교재비는 과정별로 상이하며, 자세한 형제 할인 및 패키지 혜택은 상담 시 친절히 안내해 드립니다.</p>
+  </section>
+
+  <!-- ============ 자체 교재 ============
+  <section id="textbook" style="max-width:none">
+    <h2 class="section-title reveal">자체 개발 교재, 세종SKY에듀 Series</h2>
+    <p class="section-sub reveal">시중 교재로는 채울 수 없는 빈틈을, 자체 개발 교재가 메웁니다.</p>
+    <div class="book-inner">
+      <div class="book-cover reveal">
+        <div class="bt">SEJONG SKYEDU<br>SERIES</div>
+        <div class="bb">Vol. 1 — Foundations</div>
+      </div>
+      <ul class="reveal">
+        <li>누적 오답 데이터를 반영한 유형 구성</li>
+        <li>개념 → 예제 → 실전 → 심화의 4단 구조</li>
+        <li>학년·수준별 라인업으로 정확한 매칭</li>
+        <li>매년 최신 기출을 반영한 개정판 운영</li>
+      </ul>
+    </div>
+  </section>
+  ====================================== -->
+
+  <!-- ============ 수강 후기 ============ -->
+  <section id="reviews">
+    <h2 class="section-title reveal">💬 학생과 학부모의 목소리</h2>
+    <div class="reviews-grid">
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>아이가 수학은 무조건 외우는 과목이라 생각해서 힘들어했는데, 원리 중심으로 쉽게 풀어 설명해주시니 수학에 재미를 붙이기 시작했습니다. 5명 소수정예라 집중도가 확실히 다릅니다.</p>
+        <div class="who">중2 학부모 · 보람동</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>중학교 때 수학 성적이 애매해서 고등학교 선행이 많이 불안했는데, 고1 첫 중간고사에서 당당히 96점을 받아왔습니다! 학교별 내신 경향을 정확히 파악해 주신 교재 덕분이에요.</p>
+        <div class="who">고1 학생</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>매주 발송되는 주간 테스트 리포트와 철저한 오답 클리닉이 아주 만족스럽습니다. 아이가 자주 틀리는 취약 단원이 어디인지 정확히 짚고 넘어가니 안심이 됩니다.</p>
+        <div class="who">중3 학부모 · 아름동</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>영재학교 파이널 특강이 정말 유익했습니다. KAIST 출신 선생님들의 수학·과학 모의고사 퀄리티가 대단했고, 1:1 대면 서술형 답안 첨삭 덕분에 실전 감각을 크게 올려 최종 합격할 수
+          있었습니다.</p>
+        <div class="who">세종영재학교 합격생 학부모</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>내신 4등급대에서 길을 잃었다가 고3 수리논술 대비반에 등록했습니다. 기초 개념부터 다시 논리적으로 짚어주시고 매주 답안을 꼼꼼히 첨삭받다 보니 수학적 직관이 완전히 트였습니다.</p>
+        <div class="who">고3 학생</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>수학뿐만 아니라 주말 과학(물리 1, 화학 1) 단과 수업도 수업 퀄리티가 아주 높습니다. 킬러 문항을 논리적으로 정면 돌파하는 풀이 팁을 알려주셔서 내신 1등급을 유지 중입니다.</p>
+        <div class="who">고2 학생</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>심화반에서 킬러 문항과 사고력 문제들을 깊이 있게 다루면서 아이가 어려운 문제를 끝까지 풀어냈을 때의 희열을 배우게 된 것 같습니다. 수학의 생각하는 힘을 제대로 길러주는 학원입니다.</p>
+        <div class="who">중3 학부모 · 도담동</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>고난도 심화 문제나 킬러 문항에 매번 막혀서 1등급 문턱을 넘지 못했었는데, 원장님과 강사님들께서 문제를 다각도로 쪼개 분석해주시는 해결 기법을 배운 뒤 모의고사 1등급 고정권을 달성했습니다.
+        </p>
+        <div class="who">고3 학생</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>수행평가 비중이 높아져서 서술형 답안 작성이 굉장히 중요해졌는데, 평소 식을 정확히 쓰는 연습을 철저히 훈련시켜 주신 덕분에 이번 기말고사 서술형 평가에서 감점 없이 만점을 받았습니다.</p>
+        <div class="who">중3 학생</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 합격 실적 ============ -->
+  <section id="pass" style="max-width:none">
+    <div class="wrap">
+      <h2 class="section-title reveal">🏆 명문대 & 과학고·영재고 합격 실적</h2>
+      <p class="section-sub reveal">세종SKY에듀 수학학원이 배출한 자랑스러운 합격생들을 소개합니다. (카드를 클릭하면 확대해 볼 수 있습니다.)</p>
+
+      <!-- 필터 버튼 -->
+      <div class="pass-filters reveal">
+        <button class="filter-btn active" data-filter="all">전체보기</button>
+        <button class="filter-btn" data-filter="univ">주요 대학 합격</button>
+        <button class="filter-btn" data-filter="science">영재고 · 과학고 합격</button>
+      </div>
+
+      <!-- 갤러리 그리드 -->
+      <div class="pass-grid reveal" id="passGrid">
+        <!-- 자바스크립트로 동적 렌더링 -->
+      </div>
+
+      <!-- 더보기 버튼 -->
+      <div class="pass-more-wrap reveal" id="passMoreWrap" style="display:none;">
+        <button class="btn-pass-more" id="btnPassMore">합격 실적 더 보기 ↓</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 라이트박스 모달 -->
+  <div class="lightbox" id="lightboxModal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="합격 통지서 크게 보기">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- ============ 합격 명예의 전당 ============ -->
+  <section id="honor" style="max-width:none; background:#f4f7f6;">
+    <div class="wrap">
+      <h2 class="section-title reveal">✨ 합격 명예의 전당 (최근 6개년)</h2>
+      <p class="section-sub reveal">매년 압도적인 영재학교 · 과학고 · 명문대 합격자를 배출하는 세종SKY에듀의 증명된 결과입니다.</p>
+
+      <div class="grid-container reveal"
+        style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+
+        <!-- 2023학년도 -->
+        <div class="card honor-card">
+          <div class="honor-header">
+            <h3>2023 ~</h3>
+            <span>HONOR ROLL</span>
+          </div>
+          <div class="honor-body">
+            <ul>
+              <li><strong>서울대</strong> 손O호 (충남과학고)</li>
+              <li><strong>KAIST</strong> 손O호 (충남과학고)</li>
+              <li><strong>KAIST</strong> 신O성 (충북과학고)</li>
+              <li><strong>고려대</strong> 신O성 (충북과학고)</li>
+              <li><strong>건양대 의대</strong> 최O지 (보람고)</li>
+              <li><strong>순천향대 의대</strong> 최O지 (보람고)</li>
+              <li><strong>한국영재학교</strong> 김O호 (금호중)</li>
+              <li><strong>세종영재학교</strong> 조O진 (고운중)</li>
+              <li><strong>광주영재학교</strong> 김O빈 (종촌중)</li>
+              <li><strong>충북과학고</strong> 양O우 (두루중)</li>
+              <li><strong>전남과학고</strong> 윤O빈 (양지중)</li>
+              <li><strong>충남과학고</strong> 고O진 (어진중)</li>
+              <li><strong>상산고</strong> 최O현 (종촌중)</li>
+              <li><strong>공주사대부고</strong> 김O성 (두루중)</li>
+              <li><strong>한일고</strong> 박O형 (나성중)</li>
+              <li><strong>대전외고</strong> 차O호 (새롬중)</li>
+              <li><strong>세종고</strong> 인O빈 (다정중)</li>
+              <li><strong>세종고</strong> 나O후 (양지중)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2022학년도 -->
+        <div class="card honor-card">
+          <div class="honor-header">
+            <h3>2022</h3>
+            <span>HONOR ROLL</span>
+          </div>
+          <div class="honor-body">
+            <ul>
+              <li><strong>서울대</strong> 나O혁 (세종영재학교)</li>
+              <li><strong>KAIST</strong> 임O아 (충북과학고)</li>
+              <li><strong>KAIST</strong> 이O진 (충남과학고)</li>
+              <li><strong>연세대</strong> 서O석 (충남과학고)</li>
+              <li><strong>고려대</strong> 차O민 (충북과학고)</li>
+              <li><strong>충남대 의대</strong> 박O우 (소담고)</li>
+              <li><strong>한양대</strong> 이O영 (아름고)</li>
+              <li><strong>경희대</strong> 김O호 (아름고)</li>
+              <li><strong>대전영재학교</strong> 전O민 (금호중)</li>
+              <li><strong>충남과학고</strong> 김O건 (아름중)</li>
+              <li><strong>충남과학고</strong> 김O민 (어진중)</li>
+              <li><strong>대전동신과학고</strong> 최O지 (어진중)</li>
+              <li><strong>상산고</strong> 한O민 (새롬중)</li>
+              <li><strong>공주사대부고</strong> 고O영 (다정중)</li>
+              <li><strong>대전외고</strong> 인O권 (다정중)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2021-2020학년도 -->
+        <div class="card honor-card">
+          <div class="honor-header">
+            <h3>2021 - 2020</h3>
+            <span>HONOR ROLL</span>
+          </div>
+          <div class="honor-body">
+            <ul>
+              <li><strong>서울대</strong> 홍O우 (충남과학고)</li>
+              <li><strong>서울대 화학</strong> 박O현 (충남고)</li>
+              <li><strong>서울대 바이오</strong> 신O민 (서대전고)</li>
+              <li><strong>KAIST</strong> 김O화 (동신과학고)</li>
+              <li><strong>KAIST</strong> 이O진 (충남과학고)</li>
+              <li><strong>연세대 의예</strong> 유O욱 (전민고)</li>
+              <li><strong>연세대</strong> 정O민 (보문고)</li>
+              <li><strong>연세대</strong> 권O호 (유성고)</li>
+              <li><strong>포항공대</strong> 채O윤 (충남과학고)</li>
+              <li><strong>이화여대</strong> 화학 윤O진 (아름고)</li>
+              <li><strong>대전영재학교</strong> 김O원 (아름중)</li>
+              <li><strong>세종영재학교</strong> 손O성 (아름중)</li>
+              <li><strong>대구영재학교</strong> 정O민 (보람중)</li>
+              <li><strong>충남과학고</strong> 이O현 (양지중)</li>
+              <li><strong>충북과학고</strong> 이O정 (두루중)</li>
+              <li><strong>동신과학고</strong> 이O훈 (어진중)</li>
+              <li><strong>전주상산고</strong> 박O영 (양지중)</li>
+              <li class="more-divider">충남과학고 다수 합격</li>
+              <li>홍O우 (종촌중), 차O민 (새롬중)</li>
+              <li>채O윤 (고운중), 최O지 (보람중)</li>
+              <li>정O홍 (염사중), 김O석 (계룡중)</li>
+              <li>임O아 (도담중), 김O호 (불당중)</li>
+              <li>지O우 (종촌중)</li>
+              <li><strong>공주사대고</strong> 유O희 (도담중)</li>
+              <li><strong>세종국제고</strong> 정O예 (고운중)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2019-2018학년도 -->
+        <div class="card honor-card">
+          <div class="honor-header">
+            <h3>2019 - 2018</h3>
+            <span>HONOR ROLL</span>
+          </div>
+          <div class="honor-body">
+            <ul>
+              <li><strong>서울대 의대</strong> 강O현 (둔원고) <br><small>세계생물대회 1등 수상</small></li>
+              <li><strong>서울대 치대</strong> 신O훈 (중앙고)</li>
+              <li><strong>서울대 수학</strong> 여O규 (중앙고)</li>
+              <li><strong>KAIST</strong> 김O화 (대전과학고)</li>
+              <li><strong>가톨릭 의대</strong> 이O석 (대덕고)</li>
+              <li><strong>건양대 의대</strong> 신O훈 (유성고)</li>
+              <li><strong>고려대</strong> 김O웅 (충남고)</li>
+              <li><strong>한양대</strong> 지O호 (서대전고)</li>
+              <li><strong>한양대</strong> 정O식 (충남고)</li>
+              <li><strong>서강대</strong> 이O민 (유성고)</li>
+              <li><strong>서강대</strong> 이O진 (대전외고)</li>
+              <li><strong>이화여대</strong> 조O령 (둔산여고)</li>
+              <li><strong>충남과학고</strong> 고O만 (새롬중)</li>
+              <li><strong>충남과학고</strong> 최O민 (고운중)</li>
+              <li><strong>충남과학고</strong> 오O현 (엄사중)</li>
+              <li><strong>충북과학고</strong> 박O후 (종촌중)</li>
+              <li><strong>충북과학고</strong> 김O후 (오송중)</li>
+              <li><strong>동신과학고</strong> 송O범 (노은중)</li>
+              <li><strong>동신과학고</strong> 윤O진 (대청중)</li>
+              <li><strong>동신과학고</strong> 황O후 (관평중)</li>
+              <li><strong>한일고</strong> 이O현 (관평중)</li>
+              <li><strong>공주사대부고</strong> 고O선 (두리중)</li>
+              <li><strong>경기영재학교</strong> 이O수 (탄방중)</li>
+              <li><strong>한국과학영재</strong> 김O기 (관평중)</li>
+              <li><strong>대전영재학교</strong> 주O태 (송강중)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 가맹 안내 ============
+  <section id="franchise" style="max-width:none">
+    <div class="fr-inner">
+      <h2 class="section-title reveal">검증된 시스템을 함께 운영하세요</h2>
+      <p class="section-sub reveal">자체 교재·커리큘럼·운영 노하우를 패키지로 제공합니다.</p>
+      <div class="fr-grid">
+        <div class="fr-step reveal">
+          <div class="n">01</div>
+          <h3>문의 접수</h3>
+          <p>하단 양식 또는 전화로 가맹 상담을 신청합니다.</p>
+        </div>
+        <div class="fr-step reveal">
+          <div class="n">02</div>
+          <h3>상권 분석</h3>
+          <p>희망 지역의 입지와 수요를 함께 검토합니다.</p>
+        </div>
+        <div class="fr-step reveal">
+          <div class="n">03</div>
+          <h3>계약 · 교육</h3>
+          <p>교재·운영 시스템 교육과 오픈 준비를 지원합니다.</p>
+        </div>
+        <div class="fr-step reveal">
+          <div class="n">04</div>
+          <h3>오픈 · 운영</h3>
+          <p>개원 후에도 지속적인 본사 관리를 제공합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  ====================================== -->
+
+  <!-- ============ 오시는 길 ============ -->
+  <section id="location">
+    <h2 class="section-title reveal">📍 오시는 길</h2>
+    <p class="section-sub reveal">세종SKY에듀 수학학원 · 세종 본원</p>
+    <div class="loc-grid">
+      <a href="https://naver.me/F1aa81s1" target="_blank" class="map-wrap reveal">
+        <img src="naver_map_capture.jpg" alt="세종SKY에듀 수학학원 네이버 지도 위치">
+        <div class="map-overlay">
+          <span class="map-overlay-text">네이버 지도로 길찾기 ↗</span>
+        </div>
+      </a>
+      <div class="loc-info reveal">
+        <dl>
+          <dt>주소</dt>
+          <dd>세종특별자치시 보듬3로 92 해피라움 2동 413호</dd>
+          <dt>전화</dt>
+          <dd>010-7603-7317</dd>
+          <dt>운영시간</dt>
+          <dd>09:00 ~ 22:00</dd>
+          <dt>주차</dt>
+          <dd>건물 내 주차 가능</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 문의 폼 ============
+  <section id="contact">
+    <h2 class="section-title reveal">가맹 & 수강 문의</h2>
+    <p class="section-sub reveal">아래 양식을 작성해 주시면 빠르게 연락드리겠습니다.</p>
+    <div class="contact-form reveal">
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">성함 *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">연락처 *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="type">문의 유형 *</label>
+          <select id="type" name="type" required>
+            <option value="">선택해 주세요</option>
+            <option value="franchise">가맹사업 문의</option>
+            <option value="register">수강 등록 문의</option>
+            <option value="consulting">학습 상담</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">문의 제출하기 →</button>
+      </form>
+    </div>
+  </section>
+  ==================================== -->
+
+  <footer>
+    <p>세종특별자치시 보듬3로 92 해피라움 2동 413호 | 📞 010-7603-7317</p>
+    <p>© 2026 Sejong Skyedu Math Academy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // 네비 스크롤 효과
+    const nav = document.getElementById('topnav');
+    addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20));
+
+    // 스크롤 등장 애니메이션
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 3 * 0.08) + 's';
+      io.observe(el);
+    });
+
+    // 모바일 메뉴 토글
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      const open = links.classList.toggle('open');
+      links.style.cssText = open
+        ? 'display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:20px;border-bottom:1px solid var(--line);gap:14px;box-shadow:0 8px 20px rgba(0,0,0,.06);'
+        : '';
+    });
+
+    // 폼 제출 (데모: 실제 전송 로직/연동 필요)
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('문의가 접수되었습니다. 빠르게 연락드리겠습니다.\n(실제 전송하려면 폼 처리 연동을 추가하세요.)');
+      });
+    }
+
+    // 합격 실적 데이터 정의
+    const passData = [
+      { src: '서울대_1.png', category: 'univ', title: '서울대학교 합격' },
+      { src: '서울대_2.png', category: 'univ', title: '서울대학교 합격' },
+      { src: '서울대_3.png', category: 'univ', title: '서울대학교 합격' },
+      { src: '서울대_4.png', category: 'univ', title: '서울대학교 합격' },
+      { src: '연세대_1.png', category: 'univ', title: '연세대학교 합격' },
+      { src: 'KAIST_1.png', category: 'univ', title: 'KAIST 합격' },
+      { src: 'KAIST_2.png', category: 'univ', title: 'KAIST 합격' },
+      { src: 'KAIST_3.png', category: 'univ', title: 'KAIST 합격' },
+      { src: '서강대_1.png', category: 'univ', title: '서강대학교 합격' },
+      { src: '한양대_1.png', category: 'univ', title: '한양대학교 합격' },
+      { src: '건국대_1.png', category: 'univ', title: '건국대학교 합격' },
+      { src: '가톨릭대_1.png', category: 'univ', title: '가톨릭대학교 합격' },
+      { src: '단국대_1.png', category: 'univ', title: '단국대학교 합격' },
+      { src: '단국대_2.png', category: 'univ', title: '단국대학교 합격' },
+      { src: '세종대_1.png', category: 'univ', title: '세종대학교 합격' },
+      { src: '서울시립대_1.png', category: 'univ', title: '서울시립대학교 합격' },
+      { src: '숙명여대_1.png', category: 'univ', title: '숙명여자대학교 합격' },
+      { src: '충남대_1.png', category: 'univ', title: '충남대학교 합격' },
+
+      { src: '경기과학고.jpg', category: 'science', title: '경기과학고등학교 합격' },
+      { src: '광주과학고_1.jpg', category: 'science', title: '광주과학고등학교 합격' },
+      { src: '광주영재_1.png', category: 'science', title: '광주과학고등학교(영재학교) 합격' },
+      { src: '대전과학고_1.png', category: 'science', title: '대전과학고등학교 합격' },
+      { src: '대전과학고_2.jpg', category: 'science', title: '대전과학고등학교 합격' },
+      { src: '대전과학고_3.jpg', category: 'science', title: '대전과학고등학교 합격' },
+      { src: '대전과학고_4.jpg', category: 'science', title: '대전과학고등학교 합격' },
+      { src: '세종영재_1.png', category: 'science', title: '세종과학예술영재학교 합격' },
+      { src: '세종영재_2.png', category: 'science', title: '세종과학예술영재학교 합격' },
+      { src: '세종영재_3.png', category: 'science', title: '세종과학예술영재학교 합격' },
+      { src: '전남과학고.jpg', category: 'science', title: '전남과학고등학교 합격' },
+      { src: '전북과학고_1.jpg', category: 'science', title: '전북과학고등학교 합격' },
+      { src: '충남과학고_1.jpg', category: 'science', title: '충남과학고등학교 합격' },
+      { src: '충남과학고_2.jpg', category: 'science', title: '충남과학고등학교 합격' },
+      { src: '충북과학고_1.jpg', category: 'science', title: '충북과학고등학교 합격' },
+      { src: '충북과학고_1.png', category: 'science', title: '충북과학고등학교 합격' },
+      { src: '충북과학고_2.jpg', category: 'science', title: '충북과학고등학교 합격' },
+      { src: '한과영_1.png', category: 'science', title: '한국과학영재학교 합격' },
+      { src: '한과영_2.jpg', category: 'science', title: '한국과학영재학교 합격' },
+      { src: '한과영_3.jpg', category: 'science', title: '한국과학영재학교 합격' },
+      { src: '한과영_4.jpg', category: 'science', title: '한국과학영재학교 합격' },
+      { src: '대전외고_1.jpg', category: 'science', title: '대전외국어고등학교 합격' },
+      { src: '대전외고_2.jpg', category: 'science', title: '대전외국어고등학교 합격' }
+    ];
+
+    const ITEMS_PER_PAGE = 8;
+    let currentFilter = 'all';
+    let visibleCount = ITEMS_PER_PAGE;
+
+    const passGrid = document.getElementById('passGrid');
+    const passMoreWrap = document.getElementById('passMoreWrap');
+    const btnPassMore = document.getElementById('btnPassMore');
+
+    function renderPassItems() {
+      const filtered = passData.filter(item => currentFilter === 'all' || item.category === currentFilter);
+      const renderList = filtered.slice(0, visibleCount);
+
+      // 그리드 비우기
+      passGrid.innerHTML = '';
+
+      renderList.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'pass-card reveal';
+        card.innerHTML = `
+        <div class="pass-img-wrap">
+          <img src="합격/${encodeURIComponent(item.src)}" alt="${item.title}" loading="lazy">
+        </div>
+        <div class="pass-info">
+          <h4>${item.title}</h4>
+        </div>
+      `;
+
+        // 클릭 시 라이트박스 열기
+        card.addEventListener('click', () => openLightbox(item.src, item.title));
+        passGrid.appendChild(card);
+      });
+
+      // IntersectionObserver 재바인딩
+      const cards = passGrid.querySelectorAll('.pass-card');
+      cards.forEach((card, idx) => {
+        card.style.transitionDelay = (idx % 4 * 0.08) + 's';
+        io.observe(card);
+      });
+
+      // "더보기" 버튼 표시 제어
+      if (visibleCount < filtered.length) {
+        passMoreWrap.style.display = 'block';
+      } else {
+        passMoreWrap.style.display = 'none';
+      }
+    }
+
+    // 필터 버튼 클릭 이벤트
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        e.target.classList.add('active');
+        currentFilter = e.target.getAttribute('data-filter');
+        visibleCount = ITEMS_PER_PAGE;
+        renderPassItems();
+      });
+    });
+
+    // 더보기 버튼 클릭 이벤트
+    btnPassMore.addEventListener('click', () => {
+      visibleCount += ITEMS_PER_PAGE;
+      renderPassItems();
+    });
+
+    // 라이트박스 제어
+    const lightbox = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(src, title) {
+      lightbox.style.display = 'block';
+      lightboxImg.src = "합격/" + encodeURIComponent(src);
+      lightboxCaption.textContent = title;
+      document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightboxClose) {
+        closeLightbox();
+      }
+    });
+
+    // 초기 렌더링
+    renderPassItems();
+
+    // 시간표 탭 전환 함수
+    window.switchTimetable = function (type) {
+      document.querySelectorAll('.time-content').forEach(el => el.style.display = 'none');
+      document.getElementById('time-' + type).style.display = 'block';
+
+      document.querySelectorAll('.time-tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    };
+  </script>
+</body>
+
+</html>

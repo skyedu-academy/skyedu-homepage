@@ -1,0 +1,11 @@
+# 제외할 폴더 및 파일
+홍보/
+ver_1.html
+ver_2.html
+
+# OS 및 기타 임시 파일
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
